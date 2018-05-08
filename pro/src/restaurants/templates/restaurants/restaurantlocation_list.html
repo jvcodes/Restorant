@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Articles</h1>
+<ul>
+{% for obj in object_list %}
+<li><a href="/restaurants/{{obj.slug}}">{{obj}} {{obj.category}}</a></li>
+<li>{{obj.name}} {{ob.location}} {{obj.category}}  {{obj.timestamp}} {{obj.update}}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
