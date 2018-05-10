@@ -7,5 +7,6 @@ from django.views.generic.list import ListView
 from django.views.generic import FormView
 from .models import RestaurantLocation
 
+
 class RestaurantView(DetailView):
       queryset=RestaurantLocation.objects.all()
